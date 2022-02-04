@@ -1,0 +1,16 @@
+<ion-content class="container" [fullscreen]="true">
+  <div class="profile">
+    <div class="profile-content">
+      <h1>Ciao {{userData.name}}</h1>
+      <p>Email: {{userData.email}}</p>
+    </div>
+
+    <ion-button color="danger" id="logout-btn" (click)="logout()">
+      Logout
+    </ion-button>
+
+    <ion-button color="medium" (click)="refreshToken()"
+      >Refresh Token</ion-button
+    >
+  </div>
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="sign-container">
+  <form (submit)="signUp()">
+    <ion-input placeholder="Name" name="name" [(ngModel)]="name"></ion-input>
+    <ion-input
+      placeholder="Surname"
+      name="surname"
+      [(ngModel)]="surname"
+    ></ion-input>
+    <ion-input placeholder="Email" name="email" [(ngModel)]="email"></ion-input>
+    <ion-input
+      placeholder="Password"
+      name="password"
+      [(ngModel)]="password"
+    ></ion-input>
+    <ion-button color="medium" type="submit">Sign Up</ion-button>
+  </form>
+
+  <div class="sign-bottom-container">
+    <h2>Hai già un account?</h2>
+    <ion-button color="medium" (click)="router.navigate(['sign-in'])">
+      Accedi
+    </ion-button>
+  </div>
+</ion-content>
